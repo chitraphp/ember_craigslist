@@ -1,0 +1,14 @@
+<div class="container">
+<h2>{{model.type}}</h2>
+
+{{#each model.listings as |listing|}}
+  <div class="well">
+    <h3>{{listing.owner}}</h3>
+    <p>{{listing.text}}</p>
+    <p><img src={{listing.image}}></p>
+    <p>Posted on: {{format-date listing.date_added}}</p>
+  </div>
+{{/each}}
+
+{{new-listing saveListing="saveListing" category=model}}
+</div>
