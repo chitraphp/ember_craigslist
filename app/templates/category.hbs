@@ -2,13 +2,14 @@
 
 {{#each model.listings as |listing|}}
   <div class="well">
-    <h3>{{listing.owner}}</h3>
-    <p>{{listing.text}}</p>
-    <p><img src={{listing.image}}></p>
-    <p>Posted on: {{format-date listing.date_added}}</p>
+    <h5>{{#link-to 'listing' listing.id}} {{listing.title}} {{/link-to}}</h5>
+    <!-- <p><img src={{listing.image}}></p> -->
+    <p>Posted: {{format-date listing.date_added}}</p>
     {{update-listing listing=listing updateListing="updateListing"}}
     <button {{action 'deleteListing' listing}} class="btn btn-xs btn-default">Delete</button>
   </div>
 {{/each}}
+
+<hr>
 
 {{new-listing saveListing="saveListing" category=model}}
