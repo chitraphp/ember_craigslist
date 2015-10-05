@@ -4,17 +4,29 @@
       <form>
         <div class="form-group">
           <label for="owner">Owner</label>
-          {{input value=owner id="owner"}}
+          {{input value=owner id="owner" placeholder=listing.owner}}
+        </div>
+
+        <div class="form-group">
+          <label for="title">Title</label>
+          {{input value=title id="title" placeholder=listing.title}}
         </div>
 
         <div class="form-group">
           <label for="text">Text</label>
-          {{input value=text id="text"}}
+          {{input value=text id="text" placeholder=listing.text}}
+        </div>
+
+
+
+        <div class="form-group">
+          <label for="city">City</label>
+          {{input value=city id="city" placeholder=listing.city}}
         </div>
 
         <div class="form-group">
           <label for="image">Image</label>
-          {{input value=image id="image"}}
+          {{input value=image id="image" placeholder=listing.image}}
         </div>
 
         <button {{action 'updateListing' listing}} class="btn btn-xs btn-default">Save</button>

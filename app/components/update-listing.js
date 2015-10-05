@@ -11,6 +11,8 @@ export default Ember.Component.extend({
         owner: this.get('owner'),
         text: this.get('text'),
         image: this.get('image'),
+        city: this.get('city'),
+        title: this.get('title')
       };
       this.set('updateListingForm', false);
       this.sendAction('updateListing', listing, params);

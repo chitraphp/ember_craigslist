@@ -12,6 +12,8 @@ export default Ember.Component.extend({
         owner: this.get('owner'),
         text: this.get('text'),
         image: this.get('image'),
+        title:this.get('title'),
+        city:this.get('city'),
         category: this.get('category'),
         date_added: Date.now()
       };
@@ -19,6 +21,6 @@ export default Ember.Component.extend({
       this.sendAction('saveListing', params);
     },
 
-    
+
   }
 });
