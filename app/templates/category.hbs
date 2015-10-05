@@ -1,4 +1,3 @@
-<div class="container">
 <h2>{{model.type}}</h2>
 
 {{#each model.listings as |listing|}}
@@ -7,8 +6,9 @@
     <p>{{listing.text}}</p>
     <p><img src={{listing.image}}></p>
     <p>Posted on: {{format-date listing.date_added}}</p>
+    {{update-listing listing=listing updateListing="updateListing"}}
+    <button {{action 'deleteListing' listing}} class="btn btn-xs btn-default">Delete</button>
   </div>
 {{/each}}
 
 {{new-listing saveListing="saveListing" category=model}}
-</div>

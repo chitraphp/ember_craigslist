@@ -17,6 +17,8 @@ export default Ember.Component.extend({
       };
       this.set('addNewListing', false);
       this.sendAction('saveListing', params);
-    }
+    },
+
+    
   }
 });

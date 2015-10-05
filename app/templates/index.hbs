@@ -1,9 +1,9 @@
-<div class="container">
+
   {{#each model as |category|}}
   <div class="well">
     <h3>{{#link-to 'category' category.id}}{{category.type}}{{/link-to}}</h3>
   </div>
   {{/each}}
-</div>
+
 
 {{new-category save="save"}}
