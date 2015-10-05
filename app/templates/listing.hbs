@@ -1,6 +1,6 @@
 <div class="well">
   <h2> {{ model.title }} </h2>
-  <p><strong>Posted by {{ model.owner }} </strong> | Posted at: {{format-date listing.date_added}} | City: {{ model.city }}</p>
+  <p><strong>Posted by {{ model.owner }} </strong> | Posted at: {{format-date model.date_added}} | City: {{ model.city }}</p>
   <p><img src={{model.image}}></p>
   <p>{{ model.text }}</p>
 
